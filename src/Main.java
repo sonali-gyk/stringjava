@@ -2,29 +2,35 @@
 
 public class Main {
 
-	public static void main(String...w)
-	{
+	
 		/*AccountImp a1=new AccountImp();
 		a1.getSavingAccount();*/
 		
-		int a[]= {0,1,0,3,12};
-		for(int i=0 ;i <a.length;i++)
-		{
-			for(int j=i+1;j<a.length;j++)
-			{
-			if(a[i]==0)
-			{
-				if(a[j]>a[i])
-				{
-					int temp=a[i];
-					a[i]=a[j];
-					a[j]=temp;
-				}
-			}
-			}
-			    
+		
+		    public static void main(String[] args) {
+		        String string = "swatdeers";
+		        int index = -1;
+		        char fnc = ' ';
+		       
+		       if(string.length()==0){
+		         System.out.println("EMPTY STRING");
+		       }
+		       
+		        for (char i : string.toCharArray()) {
+		            if (string.indexOf(i) == string.lastIndexOf(i)) {
+		                fnc = i;
+		                break;
+		            }
+		            else {
+		                index += 1;
+		            }
+		        }
+		        if (index == string.length()-1) {
+		            System.out.println("All characters are repeating");
+		        }
+		        else {
+		            System.out.println("First non-repeating character is " + fnc);
+		        }
+		    }
 		}
-		for(int i=0;i<a.length;i++)    
-			System.out.println(a[i]);
-	}
-}
+
